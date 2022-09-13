@@ -1,0 +1,55 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cal-container {
+  margin: 5rem 25rem;
+  width: 30rem;
+}
+
+.cal-results {
+  height: 4rem;
+  background-color: #858694;
+  text-align: end;
+  font-size: 3rem;
+  padding-inline-end: 10px;
+  color: #fff;
+}
+
+.cal-btn {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  background-color: lightgrey;
+  border: 0.5px #c0c0c0 solid;
+  width: 7.45rem;
+}
+
+.btn-box-orange {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(245, 145, 62, 255);
+  height: 4rem;
+  width: 7.5rem;
+  border: 0.5px #c0c0c0 solid;
+}
+
+.btn-box-big {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  background-color: lightgrey;
+  border: 0.5px #c0c0c0 solid;
+  text-align: center;
+}
