@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import calculate from "../logic/calculate";
+import React, { useState } from 'react';
+import calculate from '../logic/calculate';
 // eslint-disable-next-line react/prefer-stateless-function
 
 const Calculator = () => {
@@ -16,12 +16,12 @@ const Calculator = () => {
   };
 
   const { total, operation, next } = state;
-  const op = operation === "%" ? "%" : operation;
-  let result = "";
+  const op = operation === '%' ? '%' : operation;
+  let result = '';
   if (total) {
-    result = `${total} ${op || ""} ${next || ""}`;
+    result = `${total} ${op || ''} ${next || ''}`;
   } else if (next) {
-    result = `${next} ${op || ""}`;
+    result = `${next} ${op || ''}`;
   }
   return (
     <div className="cal-body">

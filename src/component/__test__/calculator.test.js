@@ -1,37 +1,38 @@
-import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import Calculator from "../calculator";
-test("Test numbers of button", () => {
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Calculator from '../calculator';
+
+test('Test numbers of button', () => {
   render(<Calculator />);
-  const buttons = screen.queryAllByRole("button");
+  const buttons = screen.queryAllByRole('button');
   expect(buttons).toHaveLength(0);
 });
-test("Test numbers of button", () => {
+test('Test numbers of button', () => {
   render(<Calculator />);
-  const button = screen.queryByText("AC");
-  const inner = screen.queryByTestId("res");
+  const button = screen.queryByText('AC');
+  const inner = screen.queryByTestId('res');
   fireEvent.click(button, () => {
-    inner.innerHTML = "";
+    inner.innerHTML = '';
   });
-  expect(inner).toHaveTextContent("0");
+  expect(inner).toHaveTextContent('0');
 });
 
-test("Test percent button", () => {
+test('Test percent button', () => {
   render(<Calculator />);
-  const perbutton = screen.queryByText("%");
-  const perinner = screen.queryByTestId("percent");
+  const perbutton = screen.queryByText('%');
+  const perinner = screen.queryByTestId('percent');
   fireEvent.click(perbutton, () => {
-    perinner.innerHTML = "";
+    perinner.innerHTML = '';
   });
-  expect(perinner).toHaveTextContent("%");
+  expect(perinner).toHaveTextContent('%');
 });
-test("Test +/- button", () => {
+test('Test +/- button', () => {
   render(<Calculator />);
-  const plusorminbutton = screen.queryByText("+/-");
-  const plusormininner = screen.queryByTestId("plusormin");
+  const plusorminbutton = screen.queryByText('+/-');
+  const plusormininner = screen.queryByTestId('plusormin');
   fireEvent.click(plusorminbutton, () => {
-    plusormininner.innerHTML = "";
+    plusormininner.innerHTML = '';
   });
-  expect(plusormininner).toHaveTextContent("+/-");
+  expect(plusormininner).toHaveTextContent('+/-');
 });
