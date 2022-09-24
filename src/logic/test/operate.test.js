@@ -51,7 +51,7 @@ describe('Operate: two decimal numbers operation ', () => {
 });
 
 describe('Operate: two negative numbers operation ', () => {
-  const one = -0.5;
+  const one = -5;
   const two = -3;
 
   it('should add two numbers', () => {
