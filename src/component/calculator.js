@@ -26,8 +26,10 @@ const Calculator = () => {
   return (
     <div className="cal-body">
       <div className="cal-container">
-        <div className="cal-results">{result || 0}</div>
-        <div className="cal-btn">
+        <div className="cal-results" data-testid="res">
+          {result || 0}
+        </div>
+        <div className="cal-btn" data-testid="ac">
           <div
             onClick={clickHandler}
             onKeyPress={clickHandler}
@@ -38,6 +40,7 @@ const Calculator = () => {
             AC
           </div>
           <div
+            data-testid="plusormin"
             onClick={clickHandler}
             onKeyPress={clickHandler}
             role="button"
@@ -47,6 +50,7 @@ const Calculator = () => {
             +/-
           </div>
           <div
+            data-testid="percent"
             onClick={clickHandler}
             onKeyPress={clickHandler}
             role="button"
