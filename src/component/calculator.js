@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import calculate from '../logic/calculate';
+import React, { useState } from "react";
+import calculate from "../logic/calculate";
 // eslint-disable-next-line react/prefer-stateless-function
 
 const Calculator = () => {
@@ -16,18 +16,20 @@ const Calculator = () => {
   };
 
   const { total, operation, next } = state;
-  const op = operation === '%' ? '%' : operation;
-  let result = '';
+  const op = operation === "%" ? "%" : operation;
+  let result = "";
   if (total) {
-    result = `${total} ${op || ''} ${next || ''}`;
+    result = `${total} ${op || ""} ${next || ""}`;
   } else if (next) {
-    result = `${next} ${op || ''}`;
+    result = `${next} ${op || ""}`;
   }
   return (
     <div className="cal-body">
       <div className="cal-container">
-        <div className="cal-results">{result || 0}</div>
-        <div className="cal-btn">
+        <div className="cal-results" data-testid="res">
+          {result || 0}
+        </div>
+        <div className="cal-btn" data-testid="ac">
           <div
             onClick={clickHandler}
             onKeyPress={clickHandler}
@@ -38,6 +40,7 @@ const Calculator = () => {
             AC
           </div>
           <div
+            data-testid="plusormin"
             onClick={clickHandler}
             onKeyPress={clickHandler}
             role="button"
@@ -47,6 +50,7 @@ const Calculator = () => {
             +/-
           </div>
           <div
+            data-testid="percent"
             onClick={clickHandler}
             onKeyPress={clickHandler}
             role="button"
