@@ -2,7 +2,7 @@
 
 # Math Magicians
 
-> This is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations, Read a random math-related quote.
+> Humanity is fallible; we frequently make calculating errors as well as errors that do not leave calculations behind. This web application is built to be quick, simple to use, and loaded with useful features to assist you in precisely and rapidly completing a variety of calculations.
 
 ## Built With
 
